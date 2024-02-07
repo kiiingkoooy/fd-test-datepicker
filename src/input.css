@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Roboto", system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .chevron, .chevron-down {
+    @apply cursor-pointer hover:text-slate-400 h-[12.5px] w-[12.5px] mx-auto;
+  }
+}
+
+.chevron{
+  position: absolute;  
+  border-top: 2.5px solid;
+  border-left: 2.5px solid;
+  transform: rotate(45deg);  
+}
+
+.chevron-down{
+  position: absolute;  
+  border-top: 2.5px solid;
+  border-left: 2.5px solid;
+  transform: rotate(225deg); 
+}
+
+.date-select{
+  color: gray;
+}
+
+.chevron-left{
+  transform: rotate(-45deg);
+}
+.chevron-right{
+  transform: rotate(135deg);
+}
+
+.calendar ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.calendar .days li {
+  z-index: 1;
+  position: relative;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  cursor: pointer;
+}
+.calendar ul li {
+  width: calc(100% / 7);
+}
+.calendar .days li::before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  border-radius: 10%;
+  transform: translate(-50%, -50%);
+}
+
+.days li:hover::before {
+  background-color: #e97f78;
+}
+.days li.active::before { 
+  background-color: #b5251a;
+}
+.days li.active{
+  color: white;
+}
+.days li:hover {
+  color: white;
+}
+.days li.inactive {
+  color: #868686;
+}
+
+ul.weeks {
+  color: #e62d36;
+}
+
+.time{
+  cursor: pointer;
+}
+.time:hover{
+  color: #b5251a;
+}
+
+.timezone{
+  cursor: pointer;
+}
+.timezone:hover{
+  color: #b5251a;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./styles.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="mx-[20%] max-[1601px]:mx-[10%] max-[1201px]:mx-[0%] mb-[5%]">
+      <div class="justify-center mx-auto mt-[7%] border-2 rounded-2xl">
+        <div class="mx-[10%] my-[10%]">
+          <p class="font-bold text-[25px] my-[1%]">
+            Date and time <span class="text-red-600">*</span>
+          </p>
+
+          <div class="flex items-center space-x-2 my-[1%] mb-[2%]">
+            <input type="checkbox" checked="checked" />
+            <p>Publish ASAP</p>
+            <i class="fa fa-info-circle"></i>
+          </div>
+
+          <p class="text-[#868686] mb-[1%]">Publication date:</p>
+
+          <div
+            id="toggleCalendar"
+            class="flex border-2 rounded w-full date-select cursor-pointer"
+          >
+            <div class="flex w-full mx-[1%] my-[1%]">
+              <div class="w-1/2 max-[650px]:w-3/4 flex items-center justify-start mx-[1%]">
+                <i class="far fa-calendar-alt pb-[0.5%]"></i>
+                <p id="renderDate" class="mx-[5%]">
+                  Select Release Date <span class="text-red-600">*</span>
+                </p>
+              </div>
+              <div class="w-1/2 max-[650px]:w-1/4 flex justify-end pt-[2px] pr-[10px]">
+                <p class="chevron-down"></p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="calendarCont"
+            class="hidden items-center justify-center w-[50%] mx-auto border-2 rounded-lg max-[870px]:w-[75%] max-[650px]:w-full"
+          >
+            <div
+              class="flex items-center bg-black text-white p-[4%] rounded-tr-lg rounded-tl-lg"
+            >
+              <div class="w-1/5 pb-[1.5vh]">
+                <p id="prev" class="chevron chevron-left"></p>
+              </div>
+              <p
+                class="current-date text-[20px] font-bold w-3/5 flex justify-center"
+              >
+                February 2024
+              </p>
+              <div class="w-1/5 flex justify-end pb-[1.5vh]">
+                <p id="next" class="chevron chevron-right"></p>
+              </div>
+            </div>
+            <div class="calendar text-[20px] text-center p-[2%]">
+              <ul class="weeks mt-[1%] mb-[2%]">
+                <li>S</li>
+                <li>S</li>
+                <li>M</li>
+                <li>T</li>
+                <li>W</li>
+                <li>T</li>
+                <li>F</li>
+              </ul>
+              <ul class="days items-center"></ul>
+            </div>
+            <div class="border-t-2">
+              <div class="flex mx-[5%] my-[5%]">
+                <div class="w-1/2">
+                  <p class="max-[450px]:text-[12px]">Publication Time</p>
+                  <div
+                    id="toggleTime"
+                    class="flex border-2 rounded-lg cursor-pointer mr-[10%]"
+                  >
+                    <p id="chosenTime" class="w-3/4 ml-[10%]">09 : 30 AM</p>
+                    <div class="w-1/4 flex justify-end pt-[2px] pr-[10px]">
+                      <p class="chevron-down"></p>
+                    </div>
+                  </div>
+                  <div
+                    id="timeCont"
+                    class="border-2 rounded-lg mr-[10%] hidden"
+                  >
+                    <ul class="timeList mx-[10%]"></ul>
+                  </div>
+                </div>
+                <div class="w-1/2">
+                  <p class="max-[450px]:text-[12px]">Publication Timezone</p>
+                  <div
+                    id="toggleTimeZone"
+                    class="flex border-2 mr-[10%] rounded-lg"
+                  >
+                    <p
+                      id="chosenTimeZone"
+                      class="w-3/4 defaultTime cursor-pointer ml-[10%]"
+                    >
+                      EST
+                    </p>
+                    <div class="w-1/4 flex justify-end pt-[2px] pr-[10px]">
+                      <p class="chevron-down"></p>
+                    </div>
+                  </div>
+                  <div
+                    id="timeZoneCont"
+                    class="border-2 rounded-lg mr-[10%] hidden"
+                  >
+                    <ul class="timeZoneList mx-[10%]"></ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
