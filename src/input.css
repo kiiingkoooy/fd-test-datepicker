@@ -78,6 +78,7 @@
   color: white;
 }
 .days li.inactive {
+  pointer-events: none;
   color: #868686;
 }
 
