@@ -121,7 +121,7 @@ const timeListTag = document.querySelector(".timeList");
 
 const displayTimeInterval = () => {
   let currentDate = new Date();
-  currentDate.setHours(9, 30, 0, 0);
+  currentDate.setHours(9, 0, 0, 0);
   let timeString = "";
 
   while (
@@ -246,8 +246,10 @@ const displayDate = (currMonth, currYear, chosenDay) => {
     selectedDay = chosenDay;
     selectedMonth = currMonth;
     selectedYear = currYear;
+    customDay = `${chosenDay < 10 ? "0" + chosenDay : chosenDay}`
+    let currentDay = today.getDate();
 
-    renderDate = `${chosenDay < 10 ? "0" + chosenDay : chosenDay}/${
+    renderDate = `${customDay < 1 ? '0' + currentDay : customDay}/${
       currMonth + 1 < 10 ? "0" + (currMonth + 1) : currMonth + 1
     }/${currYear} ${clickedTime !== "" ? clickedTime : defaultTime} ${
       clickedTimeZone !== ""
