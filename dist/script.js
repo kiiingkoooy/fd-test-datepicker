@@ -136,7 +136,7 @@ const displayTimeInterval = () => {
     else if (hoursFormat > 12) hoursFormat -= 12;
     let hours = ("0" + hoursFormat).slice(-2);
 
-    timeString += `<li class="time">${hours} : ${minutes} ${ampm}</li>`;
+    timeString += `<li class="time">${hours}:${minutes} ${ampm}</li>`;
 
     currentDate.setMinutes(currentDate.getMinutes() + 30);
   }

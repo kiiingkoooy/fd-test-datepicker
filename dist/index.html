@@ -28,7 +28,7 @@
 
           <div
             id="toggleCalendar"
-            class="flex border-2 rounded w-full date-select cursor-pointer"
+            class="flex rounded w-full date-select cursor-pointer"
           >
             <div class="flex w-full mx-[1%] my-[1%]">
               <div class="w-1/2 max-[650px]:w-3/4 flex items-center justify-start mx-[1%]">
@@ -45,7 +45,7 @@
 
           <div
             id="calendarCont"
-            class="hidden items-center justify-center w-[50%] mx-auto border-2 rounded-lg max-[870px]:w-[75%] max-[650px]:w-full"
+            class="hidden items-center justify-center w-[50%] mx-auto rounded-lg max-[870px]:w-[75%] max-[650px]:w-full mt-[0.3vh]"
           >
             <div
               class="flex items-center bg-black text-white p-[4%] rounded-tr-lg rounded-tl-lg"
@@ -74,15 +74,15 @@
               </ul>
               <ul class="days items-center"></ul>
             </div>
-            <div class="border-t-2">
+            <div class="pubTimeCont">
               <div class="flex mx-[5%] my-[5%]">
                 <div class="w-1/2">
-                  <p class="max-[450px]:text-[12px]">Publication Time</p>
+                  <p class="max-[450px]:text-[12px] font-bold ">Publication Time</p>
                   <div
                     id="toggleTime"
-                    class="flex border-2 rounded-lg cursor-pointer mr-[10%]"
+                    class="flex border-2 rounded-lg cursor-pointer mr-[10%] py-[4.5%] mt-[5%]"
                   >
-                    <p id="chosenTime" class="w-3/4 ml-[10%]">09 : 00 AM</p>
+                    <p id="chosenTime" class="w-3/4 ml-[10%] max-[450px]:text-[12px] text-[#868686]">09:00 AM</p>
                     <div class="w-1/4 flex justify-end pt-[2px] pr-[10px]">
                       <p class="chevron-down"></p>
                     </div>
@@ -91,18 +91,18 @@
                     id="timeCont"
                     class="border-2 rounded-lg mr-[10%] hidden"
                   >
-                    <ul class="timeList mx-[10%]"></ul>
+                    <ul class="timeList mx-[10%] text-[#868686]"></ul>
                   </div>
                 </div>
                 <div class="w-1/2">
-                  <p class="max-[450px]:text-[12px]">Publication Timezone</p>
+                  <p class="max-[450px]:text-[12px] font-bold">Publication Timezone</p>
                   <div
                     id="toggleTimeZone"
-                    class="flex border-2 mr-[10%] rounded-lg"
+                    class="flex border-2 mr-[10%] cursor-pointer rounded-lg py-[4.5%] mt-[5%]"
                   >
                     <p
                       id="chosenTimeZone"
-                      class="w-3/4 defaultTime cursor-pointer ml-[10%]"
+                      class="w-3/4 defaultTime ml-[10%] max-[450px]:text-[12px] text-[#868686]"
                     >
                       EST
                     </p>
@@ -114,7 +114,7 @@
                     id="timeZoneCont"
                     class="border-2 rounded-lg mr-[10%] hidden"
                   >
-                    <ul class="timeZoneList mx-[10%]"></ul>
+                    <ul class="timeZoneList mx-[10%] text-[#868686]"></ul>
                   </div>
                 </div>
               </div>
